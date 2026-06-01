@@ -1,40 +1,30 @@
 {
-  "name": "hotel-booking-app",
+  "name": "hotel-booking-mobile",
   "version": "1.0.0",
-  "main": "index.ts",
-  "dependencies": {
-    "@hookform/resolvers": "^5.4.0",
-    "@react-native-async-storage/async-storage": "2.2.0",
-    "@react-native-community/datetimepicker": "9.1.0",
-    "@tanstack/react-query": "^5.100.14",
-    "axios": "^1.16.1",
-    "date-fns": "^4.4.0",
-    "expo": "~56.0.8",
-    "expo-constants": "~56.0.16",
-    "expo-linking": "~56.0.13",
-    "expo-router": "~56.2.8",
-    "expo-secure-store": "~56.0.4",
-    "expo-status-bar": "~56.0.4",
-    "nativewind": "^4.2.4",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
-    "react-hook-form": "^7.77.0",
-    "react-native": "0.85.3",
-    "react-native-gesture-handler": "~2.31.1",
-    "react-native-modal-datetime-picker": "^18.0.0",
-    "react-native-reanimated": "4.3.1",
-    "zod": "^4.4.3",
-    "zustand": "^5.0.14"
-  },
-  "devDependencies": {
-    "@types/react": "~19.2.2",
-    "typescript": "~6.0.3"
-  },
+  "private": true,
+  "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "typecheck": "tsc --noEmit"
   },
-  "private": true
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "1.23.1",
+    "axios": "^1.7.9",
+    "expo": "~52.0.23",
+    "expo-linking": "~7.0.4",
+    "expo-router": "~4.0.15",
+    "expo-status-bar": "~2.0.0",
+    "react": "18.3.1",
+    "react-native": "0.76.5",
+    "react-native-safe-area-context": "4.12.0",
+    "react-native-screens": "~4.4.0",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "~18.3.12",
+    "typescript": "^5.3.3"
+  }
 }

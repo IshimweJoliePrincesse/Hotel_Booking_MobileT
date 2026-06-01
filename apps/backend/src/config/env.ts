@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 
-dotenv.config();
+dotenv.config({ override: true });
 
 function required(name: string, fallback?: string) {
   const value = process.env[name] ?? fallback;
@@ -17,7 +17,7 @@ export const env = {
     host: required("DB_HOST", "localhost"),
     port: Number(process.env.DB_PORT ?? 5432),
     user: required("DB_USER", "postgres"),
-    password: process.env.DB_PASSWORD ?? "",
+    password: process.env.DB_PASSWORD || "postgres123",
     database: required("DB_NAME", "hotel_booking")
   },
   mail: {
@@ -25,6 +25,6 @@ export const env = {
     port: Number(process.env.MAIL_PORT ?? 587),
     user: process.env.MAIL_USER ?? "",
     pass: process.env.MAIL_PASS ?? "",
-    from: process.env.MAIL_FROM ?? "Hotel Booking <no-reply@hotel-booking.local>"
+    from: process.env.MAIL_FROM || process.env.MAIL_USER || "Hotel Booking <no-reply@hotel-booking.local>"
   }
 };
